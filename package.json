@@ -1,11 +1,11 @@
 {
-  "name": "babel-plugin-module-resolver",
+  "name": "babel-plugin-module-resolver-image",
   "version": "3.1.1",
   "main": "lib/index.js",
-  "description": "Module resolver plugin for Babel",
+  "description": "Module resolver plugin for Babel with image 2x,3x support",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tleunen/babel-plugin-module-resolver.git"
+    "url": "https://github.com/laotian/babel-plugin-module-resolver.git"
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -14,9 +14,9 @@
     "lib"
   ],
   "author": {
-    "name": "Tommy Leunen",
-    "email": "tommy.leunen@gmail.com",
-    "url": "http://tommyleunen.com"
+    "name": "laotian",
+    "email": "tianlupan@126.com",
+    "url": "https://github.com/laotian"
   },
   "license": "MIT",
   "keywords": [
