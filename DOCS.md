@@ -12,12 +12,14 @@
 * [Usage with Flow](#usage-with-flow)
 * [For plugin authors](#for-plugin-authors)
 
+
+
 # Getting Started
 
 Install the plugin
 
 ```
-$ npm install --save-dev babel-plugin-module-resolver
+$ npm install --save-dev babel-plugin-module-resolver-image
 ```
 
 Specify the plugin in your `.babelrc` with the custom root or alias. Here's an example:

@@ -20,12 +20,22 @@ const MyUtilFn = require('utils/MyUtilFn');
 const MyUtilFn = require('../../../../utils/MyUtilFn');
 ```
 
+## Image support
+
+This plugin  support require 2x,3x images . It's forked from [babel-plugin-module-resolve](https://github.com/tleunen/babel-plugin-module-resolver)
+
+```js
+//require js/defaultIcon@2x.png
+import defaultIcon from 'js/defaultIcon';
+```
+
+
 ## Getting started
 
 Install the plugin
 
 ```
-$ npm install --save-dev babel-plugin-module-resolver
+$ npm install --save-dev babel-plugin-module-resolver-image
 ```
 
 Specify the plugin in your `.babelrc` with the custom root or alias. Here's an example:
@@ -34,6 +44,8 @@ Specify the plugin in your `.babelrc` with the custom root or alias. Here's an e
   "plugins": [
     ["module-resolver", {
       "root": ["./src"],
+      "imageScale": ["@2x","@3x"],
+      "imageTypes": [".png",".gif",".jpg"],
       "alias": {
         "test": "./test",
         "underscore": "lodash"
@@ -42,6 +54,8 @@ Specify the plugin in your `.babelrc` with the custom root or alias. Here's an e
   ]
 }
 ```
+
+If imageScale or imageTypes not supplied,  ["@2x","@3x"] and [".png",".gif",".jpg"] will be set as default value.
 
 ## Documentation
 
