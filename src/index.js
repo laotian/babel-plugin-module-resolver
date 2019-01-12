@@ -25,7 +25,7 @@ const visitor = {
 };
 
 export default ({ types }) => ({
-  name: 'module-resolver',
+  name: 'module-resolver-image',
 
   pre(file) {
     this.types = types;
