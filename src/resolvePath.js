@@ -39,6 +39,36 @@ function resolvePathFromRootConfig(sourcePath, currentFile, opts) {
   return getRelativePath(sourcePath, currentFile, absFileInRoot, opts);
 }
 
+function resolvePathFromRootConfigImage(sourcePath, currentFile, opts) {
+  const extName = path.extname(sourcePath);
+  const {imageTypes,imageScale} = opts;
+  if (imageTypes.some((imageType) => imageType === extName)) {
+    let result = null;
+    imageScale.some((scale) => {
+      const baseName =path.basename(sourcePath, extName);
+      const baseNameScale = baseName + scale;
+      const dirName =path.dirname(sourcePath);
+      const sourcePathScale =path.format({
+        dir: dirName,
+        base: baseNameScale + extName
+      });
+      const relativePath = resolvePathFromRootConfig(sourcePathScale, currentFile, opts);
+      if (relativePath) {
+        const relativePathDirName =path.dirname(relativePath);
+        const sourceRelativePath =path.format({
+          dir: relativePathDirName,
+          base: baseName + extName
+        });
+        result = sourceRelativePath;
+        return true;
+      }
+      return false;
+    });
+    return result;
+  }
+  return null;
+}
+
 function checkIfPackageExists(modulePath, currentFile, extensions) {
   const resolvedPath = nodeResolvePath(modulePath, currentFile, extensions);
   if (resolvedPath === null) {
@@ -80,6 +110,7 @@ function resolvePathFromAliasConfig(sourcePath, currentFile, opts) {
 const resolvers = [
   resolvePathFromAliasConfig,
   resolvePathFromRootConfig,
+  resolvePathFromRootConfigImage
 ];
 
 export default function resolvePath(sourcePath, currentFile, opts) {

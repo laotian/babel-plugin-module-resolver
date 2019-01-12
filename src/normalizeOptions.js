@@ -143,6 +143,8 @@ export default createSelector(
     const extensions = opts.extensions || defaultExtensions;
     const stripExtensions = opts.stripExtensions || extensions;
     const resolvePath = opts.resolvePath || defaultResolvePath;
+    const imageScale=opts.imageScale || ['@2x','@3x'];
+    const imageTypes=opts.imageTypes || ['.jpg','.gif','.png'];
 
     return {
       cwd,
@@ -152,6 +154,8 @@ export default createSelector(
       extensions,
       stripExtensions,
       resolvePath,
+      imageScale,
+      imageTypes,
     };
   },
 );
