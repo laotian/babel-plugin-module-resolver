@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-module-resolver-image",
-  "version": "3.1.1",
+  "version": "3.1.10",
   "main": "lib/index.js",
   "description": "Module resolver plugin for Babel with image 2x,3x support",
   "repository": {

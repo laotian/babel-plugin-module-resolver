@@ -1,4 +1,4 @@
-# babel-plugin-module-resolver
+# babel-plugin-module-resolver-image
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status Linux][circleci-image]][circleci-url] [![Build Status Windows][appveyor-image]][appveyor-url] [![Coverage Status][coverage-image]][coverage-url]
 
 A [Babel](http://babeljs.io) plugin to add a new resolver for your modules when compiling your code using Babel. This plugin allows you to add new "root" directories that contain your modules. It also allows you to setup a custom alias for directories, specific files, or even other npm modules.
@@ -22,7 +22,9 @@ const MyUtilFn = require('../../../../utils/MyUtilFn');
 
 ## Image support
 
-This plugin  support require 2x,3x images . It's forked from [babel-plugin-module-resolve](https://github.com/tleunen/babel-plugin-module-resolver)
+It's forked from [babel-plugin-module-resolve](https://github.com/tleunen/babel-plugin-module-resolver), [3.1.1](https://github.com/tleunen/babel-plugin-module-resolver/tree/v3.1.1)
+
+This plugin  support require 2x,3x images .
 
 ```js
 //require js/defaultIcon@2x.png
@@ -98,7 +100,7 @@ MIT, see [LICENSE.md](/LICENSE.md) for details.
 - AppDirect
 - Callstack: [React Native Paper](https://github.com/callstack/react-native-paper)
 - Codility
-- Eleme: [Element](https://github.com/ElemeFE/element) 
+- Eleme: [Element](https://github.com/ElemeFE/element)
 - Expo: [Expo SDK](https://github.com/expo/expo-sdk)
 - FormidableLabs: [Victory Native](https://github.com/FormidableLabs/victory-native)
 - OpenCollective: [OpenCollective](https://github.com/opencollective/frontend)
