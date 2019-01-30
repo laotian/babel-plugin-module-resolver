@@ -44,7 +44,7 @@ Specify the plugin in your `.babelrc` with the custom root or alias. Here's an e
 ```json
 {
   "plugins": [
-    ["module-resolver", {
+    ["module-resolver-image", {
       "root": ["./src"],
       "imageScale": ["@2x","@3x"],
       "imageTypes": [".png",".gif",".jpg"],
